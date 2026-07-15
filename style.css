@@ -520,6 +520,35 @@ section {
     margin: 0;
 }
 
+/* ===== SVG ICONS ===== */
+.tagline-icon,
+.skill-icon,
+.section-heading-icon,
+.newsletter-icon {
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.tagline-icon {
+    margin-right: 6px;
+    color: var(--primary);
+}
+
+.skill-icon {
+    margin-right: 8px;
+    color: var(--primary-light);
+}
+
+.section-heading-icon {
+    margin-right: 8px;
+    color: var(--primary);
+}
+
+.newsletter-icon {
+    margin-right: 6px;
+    color: var(--primary);
+}
+
 /* ===== DOT PATTERN ===== */
 .dot-pattern {
     position: absolute;
@@ -638,6 +667,8 @@ section {
     margin-bottom: 10px;
 }
 .skill-name {
+    display: inline-flex;
+    align-items: center;
     font-family: var(--font-heading);
     font-weight: 600;
     font-size: 0.92rem;
@@ -735,6 +766,9 @@ section {
     gap: 14px;
 }
 .project-thumb .overlay .overlay-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     color: #fff;
     font-size: 0.78rem;
     font-weight: 600;
@@ -784,6 +818,9 @@ section {
     gap: 16px;
 }
 .project-links a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
     font-size: 0.82rem;
     font-weight: 600;
     color: var(--primary);
@@ -887,6 +924,8 @@ section {
 }
 
 .contact-info h3 {
+    display: inline-flex;
+    align-items: center;
     font-family: var(--font-heading);
     font-size: 1.2rem;
     font-weight: 700;
@@ -988,6 +1027,8 @@ section {
     text-align: center;
 }
 .newsletter-wrap h4 {
+    display: inline-flex;
+    align-items: center;
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1rem;
