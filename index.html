@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio de Gael Yangu — Développeur Full-Stack spécialisé en React, Node.js et design UI/UX." />
     <title>Gael YANGU — Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -68,7 +70,7 @@
                 <div class="hero-avatar">
                     <div class="avatar-wrapper">
                         <div class="ring"></div>
-                        <img src="https://i.pravatar.cc/400?img=11" alt="Photo de Gael Yangu" width="400" height="400" loading="eager" />
+                        <img src="https://i.pravatar.cc/400?img=11" alt="Photo de Gael Yangu" width="400" height="400" loading="eager" fetchpriority="high" decoding="async" />
                     </div>
                 </div>
             </div>
@@ -112,7 +114,7 @@
                         </div>
                     </div>
                     <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop&crop=center&auto=format" alt="Espace de travail créatif" loading="lazy" />
+                        <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop&crop=center&auto=format" alt="Espace de travail créatif" width="600" height="400" loading="lazy" decoding="async" />
                     </div>
                 </div>
             </div>
@@ -208,8 +210,14 @@
 
                     <article class="project-card">
                         <div class="project-thumb">
-                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&auto=format" alt="E-Commerce Mode" loading="lazy" />
-                            <div class="overlay"><p>Application e-commerce complète avec authentification, gestion de produits et paiement sécurisé.</p></div>
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&auto=format" alt="E-Commerce Mode" width="600" height="400" loading="lazy" decoding="async" />
+                            <div class="overlay">
+                                <p class="overlay-desc">Application e-commerce complète avec authentification utilisateur, panier dynamique, gestion de produits, intégration du paiement Stripe, tableau de bord administrateur pour suivre les commandes et les statistiques de vente en temps réel.</p>
+                                <div class="overlay-links">
+                                    <a href="#">GitHub ↗</a>
+                                    <a href="#">Live ↗</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="project-body">
                             <h3>E-Commerce Mode</h3>
@@ -218,16 +226,22 @@
                                 <span>React</span><span>Node.js</span><span>Stripe</span>
                             </div>
                             <div class="project-links">
-                                <a href="#">Démo ↗</a>
-                                <a href="#">Code ↗</a>
+                                <a href="#">GitHub ↗</a>
+                                <a href="#">Live ↗</a>
                             </div>
                         </div>
                     </article>
 
                     <article class="project-card">
                         <div class="project-thumb">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&auto=format" alt="Dashboard Analytics" loading="lazy" />
-                            <div class="overlay"><p>Dashboard analytics avec visualisation de données, filtres dynamiques et export PDF.</p></div>
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&auto=format" alt="Dashboard Analytics" width="600" height="400" loading="lazy" decoding="async" />
+                            <div class="overlay">
+                                <p class="overlay-desc">Tableau de bord analytique interactif avec visualisation de données via D3.js, graphiques dynamiques, filtres temporels, export de rapports en PDF, synchronisation en temps réel avec Firebase et gestion des permissions par rôle.</p>
+                                <div class="overlay-links">
+                                    <a href="#">GitHub ↗</a>
+                                    <a href="#">Live ↗</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="project-body">
                             <h3>Dashboard Analytics</h3>
@@ -236,16 +250,22 @@
                                 <span>React</span><span>D3.js</span><span>Firebase</span>
                             </div>
                             <div class="project-links">
-                                <a href="#">Démo ↗</a>
-                                <a href="#">Code ↗</a>
+                                <a href="#">GitHub ↗</a>
+                                <a href="#">Live ↗</a>
                             </div>
                         </div>
                     </article>
 
                     <article class="project-card">
                         <div class="project-thumb">
-                            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=600&h=400&fit=crop&auto=format" alt="API REST Scolaire" loading="lazy" />
-                            <div class="overlay"><p>API robuste avec routes CRUD, middleware d'auth, rate limiting et tests unitaires.</p></div>
+                            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=600&h=400&fit=crop&auto=format" alt="API REST Scolaire" width="600" height="400" loading="lazy" decoding="async" />
+                            <div class="overlay">
+                                <p class="overlay-desc">API RESTful complète pour la gestion scolaire avec authentification JWT, routes CRUD pour élèves/cours/notes, middleware de validation, rate limiting, documentation Swagger interactive et tests unitaires Jest.</p>
+                                <div class="overlay-links">
+                                    <a href="#">GitHub ↗</a>
+                                    <a href="#">Live ↗</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="project-body">
                             <h3>API REST Scolaire</h3>
@@ -254,16 +274,22 @@
                                 <span>Node.js</span><span>Express</span><span>MongoDB</span>
                             </div>
                             <div class="project-links">
-                                <a href="#">Démo ↗</a>
-                                <a href="#">Code ↗</a>
+                                <a href="#">GitHub ↗</a>
+                                <a href="#">Live ↗</a>
                             </div>
                         </div>
                     </article>
 
                     <article class="project-card">
                         <div class="project-thumb">
-                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&auto=format" alt="App Tâches Collaborative" loading="lazy" />
-                            <div class="overlay"><p>Kanban board collaboratif avec drag &amp; drop, chat intégré et notifications en temps réel.</p></div>
+                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&auto=format" alt="App Tâches Collaborative" width="600" height="400" loading="lazy" decoding="async" />
+                            <div class="overlay">
+                                <p class="overlay-desc">Application de gestion de tâches en temps réel avec tableau Kanban drag &amp; drop, chat intégré par projet, notifications push, système de tags et priorités, historique d'activités et invitation d'équipe par lien.</p>
+                                <div class="overlay-links">
+                                    <a href="#">GitHub ↗</a>
+                                    <a href="#">Live ↗</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="project-body">
                             <h3>App Tâches Collaborative</h3>
@@ -272,16 +298,22 @@
                                 <span>React</span><span>Socket.io</span><span>PostgreSQL</span>
                             </div>
                             <div class="project-links">
-                                <a href="#">Démo ↗</a>
-                                <a href="#">Code ↗</a>
+                                <a href="#">GitHub ↗</a>
+                                <a href="#">Live ↗</a>
                             </div>
                         </div>
                     </article>
 
                     <article class="project-card">
                         <div class="project-thumb">
-                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&h=400&fit=crop&auto=format" alt="Portfolio Créatif" loading="lazy" />
-                            <div class="overlay"><p>Site vitrine avec animations au scroll, thème dynamique et design responsive.</p></div>
+                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&h=400&fit=crop&auto=format" alt="Portfolio Créatif" width="600" height="400" loading="lazy" decoding="async" />
+                            <div class="overlay">
+                                <p class="overlay-desc">Site portfolio personnel entièrement codé en HTML, CSS et JavaScript vanilla. Animations au scroll, thème sombre/clair persistant, design responsive mobile-first, optimisation SEO et accessibilité WCAG 2.1.</p>
+                                <div class="overlay-links">
+                                    <a href="#">GitHub ↗</a>
+                                    <a href="#">Live ↗</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="project-body">
                             <h3>Portfolio Créatif</h3>
@@ -290,16 +322,22 @@
                                 <span>HTML</span><span>CSS</span><span>JavaScript</span>
                             </div>
                             <div class="project-links">
-                                <a href="#">Démo ↗</a>
-                                <a href="#">Code ↗</a>
+                                <a href="#">GitHub ↗</a>
+                                <a href="#">Live ↗</a>
                             </div>
                         </div>
                     </article>
 
                     <article class="project-card">
                         <div class="project-thumb">
-                            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop&auto=format" alt="Chat App Mobile" loading="lazy" />
-                            <div class="overlay"><p>App mobile cross-platform avec messages en temps réel, envoi de médias et profil utilisateur.</p></div>
+                            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop&auto=format" alt="Chat App Mobile" width="600" height="400" loading="lazy" decoding="async" />
+                            <div class="overlay">
+                                <p class="overlay-desc">Application de messagerie instantanée cross-platform avec authentification Google/GitHub, conversations en temps réel, envoi de photos et vidéos, statut de lecture, profil utilisateur personnalisable et notifications push.</p>
+                                <div class="overlay-links">
+                                    <a href="#">GitHub ↗</a>
+                                    <a href="#">Live ↗</a>
+                                </div>
+                            </div>
                         </div>
                         <div class="project-body">
                             <h3>Chat App Mobile</h3>
@@ -308,8 +346,8 @@
                                 <span>React Native</span><span>Firebase</span><span>Node.js</span>
                             </div>
                             <div class="project-links">
-                                <a href="#">Démo ↗</a>
-                                <a href="#">Code ↗</a>
+                                <a href="#">GitHub ↗</a>
+                                <a href="#">Live ↗</a>
                             </div>
                         </div>
                     </article>
