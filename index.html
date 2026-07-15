@@ -6,7 +6,7 @@
     <title>Gael YANGU — Portfolio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -45,6 +45,11 @@
     <main>
         <!-- ===== HERO ===== -->
         <section id="hero" aria-labelledby="hero-title">
+            <div class="hero-bg-shapes">
+                <span class="shape shape-1"></span>
+                <span class="shape shape-2"></span>
+                <span class="shape shape-3"></span>
+            </div>
             <div class="container hero-grid">
                 <div class="hero-content">
                     <span class="tagline">🚀 Développeur Full-Stack</span>
@@ -71,10 +76,12 @@
 
         <!-- ===== ABOUT ===== -->
         <section id="about" aria-labelledby="about-title">
+            <div class="dot-pattern"></div>
             <div class="container">
                 <div class="section-header">
-                    <h2 class="section-title" id="about-title">À <span class="highlight">propos</span></h2>
-                    <p class="section-sub">Qui je suis et mon parcours dans le développement web.</p>
+                    <span class="section-label">À propos</span>
+                    <h2 class="section-title" id="about-title">Qui suis-je <span class="highlight">?</span></h2>
+                    <p class="section-sub">Mon parcours et ma passion pour le développement web.</p>
                 </div>
                 <div class="about-grid">
                     <div class="about-text">
@@ -115,8 +122,9 @@
         <section id="skills" aria-labelledby="skills-title">
             <div class="container">
                 <div class="section-header center">
-                    <h2 class="section-title" id="skills-title">Mes <span class="highlight">compétences</span></h2>
-                    <p class="section-sub">Technologies et outils que je maîtrise au quotidien.</p>
+                    <span class="section-label">Compétences</span>
+                    <h2 class="section-title" id="skills-title">Ce que je <span class="highlight">maîtrise</span></h2>
+                    <p class="section-sub">Technologies et outils que j'utilise au quotidien.</p>
                 </div>
                 <div class="skills-grid">
 
@@ -192,8 +200,9 @@
         <section id="projects" aria-labelledby="projects-title">
             <div class="container">
                 <div class="section-header center">
-                    <h2 class="section-title" id="projects-title">Mes <span class="highlight">projets</span></h2>
-                    <p class="section-sub">Une sélection de réalisations récentes, du concept au produit final.</p>
+                    <span class="section-label">Projets</span>
+                    <h2 class="section-title" id="projects-title">Mes <span class="highlight">réalisations</span></h2>
+                    <p class="section-sub">Une sélection de projets récents, du concept au produit final.</p>
                 </div>
                 <div class="projects-grid">
 
@@ -313,7 +322,8 @@
         <section id="experience" aria-labelledby="exp-title">
             <div class="container">
                 <div class="section-header center">
-                    <h2 class="section-title" id="exp-title">Parcours & <span class="highlight">expérience</span></h2>
+                    <span class="section-label">Expérience</span>
+                    <h2 class="section-title" id="exp-title">Mon <span class="highlight">parcours</span></h2>
                     <p class="section-sub">Mon évolution professionnelle et les projets marquants.</p>
                 </div>
                 <div class="timeline">
@@ -362,6 +372,7 @@
         <section id="contact" aria-labelledby="contact-title">
             <div class="container">
                 <div class="section-header center">
+                    <span class="section-label">Contact</span>
                     <h2 class="section-title" id="contact-title">Parlons de votre <span class="highlight">projet</span></h2>
                     <p class="section-sub">Une idée ? Un besoin ? N'hésitez pas à me contacter.</p>
                 </div>
