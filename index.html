@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" data-theme="light">
+<html lang="fr">
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -11,12 +11,18 @@
 </head>
 <body>
 
+    <!-- Theme toggle (CSS-only via checkbox) -->
+    <input type="checkbox" id="theme-toggle" class="theme-toggle-input" />
+
+    <!-- Hamburger toggle (CSS-only via checkbox) -->
+    <input type="checkbox" id="hamburger-toggle" class="hamburger-input" />
+
     <!-- ===== HEADER ===== -->
     <header role="banner">
         <div class="container nav-inner">
             <a href="#hero" class="logo" aria-label="Accueil">GY.</a>
             <nav role="navigation" aria-label="Navigation principale">
-                <ul class="nav-links" id="navLinks" role="menubar">
+                <ul class="nav-links" role="menubar">
                     <li role="none"><a href="#about" role="menuitem">À propos</a></li>
                     <li role="none"><a href="#skills" role="menuitem">Compétences</a></li>
                     <li role="none"><a href="#projects" role="menuitem">Projets</a></li>
@@ -25,12 +31,13 @@
                 </ul>
             </nav>
             <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" aria-label="Basculer le mode sombre" title="Changer de thème">
-                    🌙
-                </button>
-                <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
+                <label for="theme-toggle" class="theme-toggle-btn" aria-label="Basculer le mode sombre" title="Changer de thème">
+                    <span class="icon-sun">☀️</span>
+                    <span class="icon-moon">🌙</span>
+                </label>
+                <label for="hamburger-toggle" class="hamburger" aria-label="Menu">
                     <span></span><span></span><span></span>
-                </button>
+                </label>
             </div>
         </div>
     </header>
@@ -56,7 +63,7 @@
                 <div class="hero-avatar">
                     <div class="avatar-wrapper">
                         <div class="ring"></div>
-                        <img src="https://i.pravatar.cc/400?img=11" alt="Photo d'Alexandre Moreau" width="400" height="400" loading="eager" />
+                        <img src="https://i.pravatar.cc/400?img=11" alt="Photo de Gael Yangu" width="400" height="400" loading="eager" />
                     </div>
                 </div>
             </div>
@@ -70,17 +77,17 @@
                     <p class="section-sub">Qui je suis et mon parcours dans le développement web.</p>
                 </div>
                 <div class="about-grid">
-                    <div class="about-text reveal">
+                    <div class="about-text">
                         <p>
-                            <strong>Bonjour !</strong> Je suis Alexandre, développeur Full-Stack basé à Paris.
+                            <strong>Bonjour !</strong> Je suis Gael Yangu, développeur Full-Stack basé en France.
                             Passionné par le code, le design et les technologies émergentes, j'aime créer
                             des applications web à la fois performantes et esthétiques.
                         </p>
                         <p>
-                            Après un master en ingénierie informatique, j'ai travaillé chez plusieurs startups
-                            où j'ai pu développer une solide expertise en React, TypeScript, Node.js et
-                            architecture cloud. Aujourd'hui, je suis indépendant et je collabore avec des
-                            marques pour donner vie à leurs projets digitaux.
+                            Après une formation en ingénierie informatique, j'ai travaillé chez plusieurs startups
+                            où j'ai pu développer une solide expertise en React, Node.js et
+                            architecture cloud. Aujourd'hui, je collabore avec des
+                            marques et startups pour donner vie à leurs projets digitaux.
                         </p>
                         <div class="about-stats">
                             <div class="stat-item">
@@ -97,7 +104,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="about-image reveal-right">
+                    <div class="about-image">
                         <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop&crop=center&auto=format" alt="Espace de travail créatif" loading="lazy" />
                     </div>
                 </div>
@@ -111,8 +118,72 @@
                     <h2 class="section-title" id="skills-title">Mes <span class="highlight">compétences</span></h2>
                     <p class="section-sub">Technologies et outils que je maîtrise au quotidien.</p>
                 </div>
-                <div class="skills-grid" id="skillsGrid">
-                    <!-- injected by JS -->
+                <div class="skills-grid">
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">🌐  HTML / CSS</span>
+                            <span class="skill-percent">95%</span>
+                        </div>
+                        <div class="skill-bar"><div class="fill" style="--w:95%"></div></div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">⚡  JavaScript</span>
+                            <span class="skill-percent">90%</span>
+                        </div>
+                        <div class="skill-bar"><div class="fill" style="--w:90%"></div></div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">⚛️  React</span>
+                            <span class="skill-percent">85%</span>
+                        </div>
+                        <div class="skill-bar"><div class="fill" style="--w:85%"></div></div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">🟢  Node.js</span>
+                            <span class="skill-percent">80%</span>
+                        </div>
+                        <div class="skill-bar"><div class="fill" style="--w:80%"></div></div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">🔷  TypeScript</span>
+                            <span class="skill-percent">78%</span>
+                        </div>
+                        <div class="skill-bar"><div class="fill" style="--w:78%"></div></div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">🐍  Python</span>
+                            <span class="skill-percent">72%</span>
+                        </div>
+                        <div class="skill-bar"><div class="fill" style="--w:72%"></div></div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">🐙  Git / GitHub</span>
+                            <span class="skill-percent">88%</span>
+                        </div>
+                        <div class="skill-bar"><div class="fill" style="--w:88%"></div></div>
+                    </div>
+
+                    <div class="skill-card">
+                        <div class="skill-header">
+                            <span class="skill-name">🎨  UI/UX Design</span>
+                            <span class="skill-percent">70%</span>
+                        </div>
+                        <div class="skill-bar"><div class="fill" style="--w:70%"></div></div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -124,11 +195,116 @@
                     <h2 class="section-title" id="projects-title">Mes <span class="highlight">projets</span></h2>
                     <p class="section-sub">Une sélection de réalisations récentes, du concept au produit final.</p>
                 </div>
-                <div class="project-filters" id="projectFilters" role="tablist" aria-label="Filtrer les projets">
-                    <!-- injected by JS -->
-                </div>
-                <div class="projects-grid" id="projectsGrid">
-                    <!-- injected by JS -->
+                <div class="projects-grid">
+
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop&auto=format" alt="E-Commerce Mode" loading="lazy" />
+                            <div class="overlay"><p>Application e-commerce complète avec authentification, gestion de produits et paiement sécurisé.</p></div>
+                        </div>
+                        <div class="project-body">
+                            <h3>E-Commerce Mode</h3>
+                            <p class="project-desc">Boutique en ligne responsive avec panier, paiement Stripe et tableau de bord admin.</p>
+                            <div class="project-tags">
+                                <span>React</span><span>Node.js</span><span>Stripe</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">Démo ↗</a>
+                                <a href="#">Code ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop&auto=format" alt="Dashboard Analytics" loading="lazy" />
+                            <div class="overlay"><p>Dashboard analytics avec visualisation de données, filtres dynamiques et export PDF.</p></div>
+                        </div>
+                        <div class="project-body">
+                            <h3>Dashboard Analytics</h3>
+                            <p class="project-desc">Tableau de bord interactif avec graphiques dynamiques et données en temps réel.</p>
+                            <div class="project-tags">
+                                <span>React</span><span>D3.js</span><span>Firebase</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">Démo ↗</a>
+                                <a href="#">Code ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=600&h=400&fit=crop&auto=format" alt="API REST Scolaire" loading="lazy" />
+                            <div class="overlay"><p>API robuste avec routes CRUD, middleware d'auth, rate limiting et tests unitaires.</p></div>
+                        </div>
+                        <div class="project-body">
+                            <h3>API REST Scolaire</h3>
+                            <p class="project-desc">API backend pour gestion d'école avec authentification JWT et documentation Swagger.</p>
+                            <div class="project-tags">
+                                <span>Node.js</span><span>Express</span><span>MongoDB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">Démo ↗</a>
+                                <a href="#">Code ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop&auto=format" alt="App Tâches Collaborative" loading="lazy" />
+                            <div class="overlay"><p>Kanban board collaboratif avec drag &amp; drop, chat intégré et notifications en temps réel.</p></div>
+                        </div>
+                        <div class="project-body">
+                            <h3>App Tâches Collaborative</h3>
+                            <p class="project-desc">Application de gestion de tâches en temps réel pour équipes avec notifications push.</p>
+                            <div class="project-tags">
+                                <span>React</span><span>Socket.io</span><span>PostgreSQL</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">Démo ↗</a>
+                                <a href="#">Code ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600&h=400&fit=crop&auto=format" alt="Portfolio Créatif" loading="lazy" />
+                            <div class="overlay"><p>Site vitrine avec animations au scroll, thème dynamique et design responsive.</p></div>
+                        </div>
+                        <div class="project-body">
+                            <h3>Portfolio Créatif</h3>
+                            <p class="project-desc">Site portfolio avec animations CSS avancées et système de thème sombre/clair.</p>
+                            <div class="project-tags">
+                                <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">Démo ↗</a>
+                                <a href="#">Code ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-thumb">
+                            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&h=400&fit=crop&auto=format" alt="Chat App Mobile" loading="lazy" />
+                            <div class="overlay"><p>App mobile cross-platform avec messages en temps réel, envoi de médias et profil utilisateur.</p></div>
+                        </div>
+                        <div class="project-body">
+                            <h3>Chat App Mobile</h3>
+                            <p class="project-desc">Application de messagerie instantanée avec authentification et historique.</p>
+                            <div class="project-tags">
+                                <span>React Native</span><span>Firebase</span><span>Node.js</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#">Démo ↗</a>
+                                <a href="#">Code ↗</a>
+                            </div>
+                        </div>
+                    </article>
+
                 </div>
             </div>
         </section>
@@ -140,13 +316,49 @@
                     <h2 class="section-title" id="exp-title">Parcours & <span class="highlight">expérience</span></h2>
                     <p class="section-sub">Mon évolution professionnelle et les projets marquants.</p>
                 </div>
-                <div class="timeline" id="timeline">
-                    <!-- injected by JS -->
+                <div class="timeline">
+
+                    <div class="timeline-item">
+                        <div class="date">2024 — Présent</div>
+                        <div class="content">
+                            <h4>Développeur Full-Stack Senior</h4>
+                            <div class="company">Freelance / Indépendant</div>
+                            <p>Développement d'applications web sur mesure pour des clients variés. Architecture React + Node.js, déploiement cloud.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="date">2022 — 2024</div>
+                        <div class="content">
+                            <h4>Développeur Full-Stack</h4>
+                            <div class="company">Startup TechLab</div>
+                            <p>Conception et développement d'une plateforme SaaS. Migration vers microservices, optimisation des performances.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="date">2021 — 2022</div>
+                        <div class="content">
+                            <h4>Développeur Frontend</h4>
+                            <div class="company">Agence Digitale WebPulse</div>
+                            <p>Création d'interfaces utilisateur réactives pour des clients e-commerce et corporate. Intégration UI/UX.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="date">2020 — 2021</div>
+                        <div class="content">
+                            <h4>Stagiaire Développeur</h4>
+                            <div class="company">Collectif Numérique</div>
+                            <p>Première expérience professionnelle : développement de composants React et maintenance d'applications existantes.</p>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
 
-        <!-- ===== CONTACT + NEWSLETTER ===== -->
+        <!-- ===== CONTACT ===== -->
         <section id="contact" aria-labelledby="contact-title">
             <div class="container">
                 <div class="section-header center">
@@ -154,12 +366,12 @@
                     <p class="section-sub">Une idée ? Un besoin ? N'hésitez pas à me contacter.</p>
                 </div>
                 <div class="contact-grid">
-                    <div class="contact-info reveal">
+                    <div class="contact-info">
                         <h3>📬 Coordonnées</h3>
                         <p>Je suis toujours ouvert aux nouvelles opportunités et aux collaborations.</p>
                         <div class="contact-item">
                             <span class="icon">📧</span>
-                            <a href="mailto:alexandre@portfolio.fr">alexandre@portfolio.fr</a>
+                            <a href="mailto:gael@portfolio.fr">gael@portfolio.fr</a>
                         </div>
                         <div class="contact-item">
                             <span class="icon">📍</span>
@@ -167,16 +379,16 @@
                         </div>
                         <div class="contact-item">
                             <span class="icon">📱</span>
-                            <a href="tel:+33123456789">+33 1 23 45 67 89</a>
+                            <a href="tel:+33612345678">+33 6 12 34 56 78</a>
                         </div>
-                        <div style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">
-                            <a href="#" aria-label="GitHub" style="font-size:1.6rem;color:var(--text-secondary);transition:color var(--transition);">🐙</a>
-                            <a href="#" aria-label="LinkedIn" style="font-size:1.6rem;color:var(--text-secondary);transition:color var(--transition);">🔗</a>
-                            <a href="#" aria-label="Twitter" style="font-size:1.6rem;color:var(--text-secondary);transition:color var(--transition);">🐦</a>
-                            <a href="#" aria-label="Dribbble" style="font-size:1.6rem;color:var(--text-secondary);transition:color var(--transition);">🏀</a>
+                        <div class="social-links">
+                            <a href="#" aria-label="GitHub">🐙</a>
+                            <a href="#" aria-label="LinkedIn">🔗</a>
+                            <a href="#" aria-label="Twitter">🐦</a>
+                            <a href="#" aria-label="Dribbble">🏀</a>
                         </div>
                     </div>
-                    <form class="contact-form reveal-right" id="contactForm" novalidate>
+                    <form class="contact-form" action="#" method="post">
                         <input type="text" placeholder="Votre nom" required aria-required="true" />
                         <input type="email" placeholder="Votre email" required aria-required="true" />
                         <input type="text" placeholder="Objet" />
@@ -186,12 +398,12 @@
                 </div>
 
                 <!-- Newsletter -->
-                <div class="newsletter-wrap reveal">
+                <div class="newsletter-wrap">
                     <div>
                         <h4>📰 Restez informé</h4>
                         <p>Recevez mes articles, astuces et nouveautés chaque mois.</p>
                     </div>
-                    <form class="newsletter-form" id="newsletterForm">
+                    <form class="newsletter-form" action="#" method="post">
                         <input type="email" placeholder="Votre email" required aria-required="true" />
                         <button type="submit" class="btn btn-primary">S'abonner</button>
                     </form>
@@ -203,7 +415,7 @@
     <!-- ===== FOOTER ===== -->
     <footer role="contentinfo">
         <div class="container footer-inner">
-            <span class="footer-copy">© 2026 Alexandre Moreau — Tous droits réservés.</span>
+            <span class="footer-copy">© 2026 Gael Yangu — Tous droits réservés.</span>
             <div class="footer-socials">
                 <a href="#" aria-label="GitHub">🐙</a>
                 <a href="#" aria-label="LinkedIn">🔗</a>
@@ -213,6 +425,5 @@
         </div>
     </footer>
 
-    <script src="script.js" defer></script>
 </body>
 </html>
